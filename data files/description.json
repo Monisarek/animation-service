@@ -1,0 +1,9 @@
+{
+  "type": "line",
+  "x_data_column": "Time",
+  "y_data_column": "Value",
+  "color": "green",
+  "title": "Линейный график",
+  "x_label": "Time (s)",
+  "y_label": "Value"
+}
