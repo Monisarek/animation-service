@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animation</title>
+    <style>
+        .header {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+            font-size: 15px;
+        }
+        
+        .animation-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+        }
+        
+        .animation-image {
+            width: 50%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        ID Анимации:
+        <h1>{{ animation.animation_id }}</h1>
+    </div>
+    
+    <div class="animation-container">
+        <img class="animation-image" src="{{ animation.animation_path.url }}" alt="Animation">
+    </div>
+</body>
+</html>

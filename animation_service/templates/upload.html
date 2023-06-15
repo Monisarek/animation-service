@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Загрузка файлов</title>
+    <style>
+        body {
+            background-color: #f1f1f1;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .file-input {
+            margin-bottom: 10px;
+        }
+
+        .submit-button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Загрузите файлы JSON и CSV</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="file-input">
+                <label for="csv_file">CSV файл:     </label>
+                <br>
+                <input type="file" name="csv_file" id="csv_file">
+            </div>
+            <div class="file-input">
+                <label for="json_description">JSON файл:     </label>
+                <br>
+                <input type="file" name="json_description" id="json_description">
+            </div>
+            <button class="submit-button" type="submit">Загрузить</button>
+        </form>
+    </div>
+</body>
+</html>
